@@ -2,8 +2,9 @@ import React from "react";
 
 //UI components
 import { Menu, Input, Image } from "semantic-ui-react";
+import Form from "../Form/form";
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <div>
       <Menu fixed="top" inverted>
@@ -17,7 +18,7 @@ export const Header = () => {
           <Menu.Item as="a">Home</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>
-              <Input icon='search' placeholder='Search...' />
+              <Form searchName={props.movieName}></Form>
             </Menu.Item>
           </Menu.Menu>
       </Menu>
