@@ -3,9 +3,6 @@ import React from "react";
 import { Menu, Image } from "semantic-ui-react";
 //components
 import Form from "../Form/form";
-//Router
-import { Link } from "react-router-dom";
-
 
 export const Header = ({ movieName }) => {
   return (
@@ -18,10 +15,7 @@ export const Header = ({ movieName }) => {
             style={{ marginRight: "0.1rem" }}
           />
         </Menu.Item>
-        <Menu.Item >
-        <Link to='/'></Link>
-          Home
-        </Menu.Item>
+
         <Menu.Menu position="right">
           <Menu.Item>
             <Form searchName={movieName}></Form>

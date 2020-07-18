@@ -20,7 +20,7 @@ export const Home = ({movies}) => {
                       <Button inverted color='red'>
                       <Link key={movie.imdbID} to={{
 													pathname:`/movieDetail/${movie.imdbID}`,
-													query: {id : movie.imdbID}
+													state: {id : movie.imdbID}
 												}}>View Details </Link>
                         
 											</Button>
