@@ -10,7 +10,6 @@ export const Footer = () => {
         vertical
         style={{
           margin: "5em 0em 0em",
-          position: "fixed",
           width: "100%",
           left: 0,
           bottom: 0,

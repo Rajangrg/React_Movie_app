@@ -4,10 +4,10 @@ import React from 'react'
 import { Button} from 'semantic-ui-react';
 import { Input } from 'semantic-ui-react'
 
-const Form =(props)=>{
+const Form =({searchName})=>{
 	return(
 		<div>
-			<form onSubmit={props.searchName}>
+			<form onSubmit={searchName}>
 				<Input focus  icon='search' iconPosition='left' type="text" placeholder="search here..." name="movieName"></Input>
 				<Button inverted color='blue'>Search</Button>
 			</form>

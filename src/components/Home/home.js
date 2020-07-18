@@ -1,23 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { SearchMovieAPI } from "../../services/movieAPI";
+import React from "react";
+import { Container, Grid, Popup, Card, Image, Icon } from "semantic-ui-react";
 
-import {Container, Header} from 'semantic-ui-react'
+export const Home = (props) => {
+  console.log(props.movies)
+  return (
+    <div>
+      <Container  style={{ marginTop: "7em"}}>
+        <Grid container columns={4}>
+          {props.movies.map((movie) => {
+            return (
+              <Grid.Column>
+                <Popup
+                  position="top center"
+                  trigger={
+                    <Card>
+                      <Image src={movie.Poster} />
+                    </Card>
+                  }
+                >
+                  <Popup.Header>{movie.Title}</Popup.Header>
+                  <Popup.Content>
+                  <Icon name='calendar alternate outline' /> Year: {movie.Year}
+                  </Popup.Content>
+                </Popup>
+              </Grid.Column>
+            )
+          })}
+        </Grid>
+      </Container>
+    </div>
+  );
+}
 
-export const Home = () => {
-  const [getMovies, setMovies] = useState([]);
-  useEffect(() => {
-    const getResult = async () => {
-      setMovies(await SearchMovieAPI());
-    };
-    getResult();
-  }, [setMovies]);
-
-  console.log(getMovies);
-
-  return <div>
-      <Container text style={{ marginTop: '7em' }}>
-      <Header as='h1'>Fetch result  here</Header>
-    </Container>
-
-  </div>;
-};

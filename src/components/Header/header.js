@@ -1,10 +1,10 @@
 import React from "react";
 
 //UI components
-import { Menu, Input, Image } from "semantic-ui-react";
+import { Menu, Image } from "semantic-ui-react";
 import Form from "../Form/form";
 
-export const Header = (props) => {
+export const Header = ({movieName}) => {
   return (
     <div>
       <Menu fixed="top" inverted>
@@ -12,13 +12,13 @@ export const Header = (props) => {
             <Image
               size="mini"
               src="https://img.icons8.com/officel/80/000000/react.png"
-              style={{ marginRight: "0.8rem" }}
+              style={{ marginRight: "0.1rem" }}
             />
           </Menu.Item>
           <Menu.Item as="a">Home</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>
-              <Form searchName={props.movieName}></Form>
+              <Form searchName={movieName}></Form>
             </Menu.Item>
           </Menu.Menu>
       </Menu>
