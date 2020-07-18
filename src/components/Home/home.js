@@ -1,5 +1,8 @@
 import React from "react";
+//UI components
 import { Container, Grid, Popup, Card, Image, Icon, Button } from "semantic-ui-react";
+//Router
+import {Link} from 'react-router-dom'
 
 export const Home = ({movies}) => {
   // console.log(movies)
@@ -11,12 +14,15 @@ export const Home = ({movies}) => {
             return (
               <Grid.Column key={movie.imdbID}>
                 <Popup
-               
                   trigger={
                     <Card>
                       <Image src={movie.Poster} />
                       <Button inverted color='red'>
-												View Details
+                      <Link key={movie.imdbID} to={{
+													pathname:`/movieDetail/${movie.imdbID}`,
+													query: {id : movie.imdbID}
+												}}>View Details </Link>
+                        
 											</Button>
                     </Card>
                   }
