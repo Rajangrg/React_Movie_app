@@ -19,8 +19,15 @@ class App extends React.Component {
     });
   };
 
+componentDidMount = async()=>{
+  const fixedResponse = await SearchMovieAPI()
+  this.setState({
+    movieCollection: fixedResponse.Search
+  })
+}
+
   render() {
-    console.log(this.state.movieCollection);
+    //console.log(this.state.movieCollection);
     return (
       <div>
         <Header movieName={this.searchMovieName}></Header>

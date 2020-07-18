@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Grid, Popup, Card, Image, Icon } from "semantic-ui-react";
 
-export const Home = (props) => {
-  console.log(props.movies)
+export const Home = ({movies}) => {
+  // console.log(movies)
   return (
     <div>
       <Container  style={{ marginTop: "7em"}}>
         <Grid container columns={4}>
-          {props.movies.map((movie) => {
+          {movies.map((movie) => {
             return (
-              <Grid.Column>
+              <Grid.Column key={movie.imdbID}>
                 <Popup
                   position="top center"
                   trigger={
