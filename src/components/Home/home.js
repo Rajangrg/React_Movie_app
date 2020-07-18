@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Popup, Card, Image, Icon } from "semantic-ui-react";
+import { Container, Grid, Popup, Card, Image, Icon, Button } from "semantic-ui-react";
 
 export const Home = ({movies}) => {
   // console.log(movies)
@@ -11,10 +11,13 @@ export const Home = ({movies}) => {
             return (
               <Grid.Column key={movie.imdbID}>
                 <Popup
-                  position="top center"
+               
                   trigger={
                     <Card>
                       <Image src={movie.Poster} />
+                      <Button inverted color='red'>
+												View Details
+											</Button>
                     </Card>
                   }
                 >
@@ -22,7 +25,9 @@ export const Home = ({movies}) => {
                   <Popup.Content>
                   <Icon name='calendar alternate outline' /> Year: {movie.Year}
                   </Popup.Content>
+                 
                 </Popup>
+               
               </Grid.Column>
             )
           })}
