@@ -38,6 +38,8 @@ class MovieDetail extends React.Component {
             text
             style={{
               margin: "2em 0em 0em",
+              left: 0,
+              bottom: 0,
             }}
           >
             <Grid>

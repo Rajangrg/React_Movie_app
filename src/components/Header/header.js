@@ -12,7 +12,6 @@ export const Header = ({ movieName }) => {
           <Image
             size="mini"
             src="https://img.icons8.com/officel/80/000000/react.png"
-            style={{ marginRight: "0.1rem" }}
           />
         </Menu.Item>
 
