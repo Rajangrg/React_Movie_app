@@ -29,8 +29,8 @@ export const Footer = () => {
             <List.Item as="a" href="http://www.omdbapi.com/">
               API details
             </List.Item>
-            <List.Item as="a" href="https://github.com/Rajangrg/React_Movie_app/blob/master/LICENSE">
-              MIT License
+            <List.Item as="a" href="https://github.com/Rajangrg/React_Movie_app">
+             Source Code
             </List.Item>
           </List>
         </Container>
